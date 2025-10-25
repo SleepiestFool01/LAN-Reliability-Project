@@ -1,4 +1,4 @@
-%% Funtion runTwoParallelSeriesLinkSim()
+%% Funtion runTwoParallelLinkSim()
 % Spray a packet over the network if one makes it then packet = success 
 % Parameters
 %  K - the number of packets in the application message
@@ -6,7 +6,7 @@
 %  N - the number of simulations to run
 %
 % Returns: the average numeric result across the total simulations
-function result = runTwoParallelSeriesLinkSim(K,p,N)
+function result = runTwoParallelLinkSim(K,p,N)
 
     simResults = ones(1,N); % a place to store the result of each simulation
     
@@ -38,5 +38,6 @@ function result = runTwoParallelSeriesLinkSim(K,p,N)
 
     result = mean(simResults);
 end
+
 
 
