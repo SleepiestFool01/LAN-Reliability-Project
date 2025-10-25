@@ -18,7 +18,7 @@ theoryMatrix = zeros(length(K), length(p)); %Allocates the Correct amount of mem
 %order to easily graph it.
 for m=1:length(K) 
     for n=1:length(p)
-    simResultsMatrix(m,n) = runTwoParallelSeriesLinkSim(K(m), p(n), N);
+    simResultsMatrix(m,n) = runTwoParallelLinkSim(K(m), p(n), N);
     theoryMatrix(m,n) = K(m) / (1 - p(n));
     end 
 end
@@ -56,3 +56,4 @@ ylabel("Total transmissions needed");
 legend("Location","northwest");
 grid on;
 set(gca, 'YScale', 'log'); %This line alone probably took the most to figure out XD
+
