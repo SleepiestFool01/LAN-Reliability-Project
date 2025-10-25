@@ -27,7 +27,7 @@ for R=1:length(K)
     figure;
     semilogy(p, simResultsMatrix(R,:), 'o', 'DisplayName', 'Simulation'); 
 
-    title("Comound Network, K = " + K(R)); % Displays: Compound Metwork, K = 1|5|15|50|100|1000
+    title("Compound Network, K = " + K(R)); % Displays: Compound Metwork, K = 1|5|15|50|100|1000
     %label X & Y Axis 
     xlabel("Packet loss probability p");
     ylabel("Total transmissions needed");
@@ -51,3 +51,4 @@ ylabel("Total transmissions needed");
 legend("Location","northwest");
 grid on;
 set(gca, 'YScale', 'log'); %This line alone probably took the most to figure out XD
+
